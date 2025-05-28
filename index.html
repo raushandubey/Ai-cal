@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart AI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Smart AI Calculator</h1>
+            <div class="header-controls">
+                <div class="voice-control">
+                    <button id="voiceButton" class="voice-button" title="Voice Control">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <div id="voiceStatus" class="voice-status">Click to start voice control (English)</div>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </header>
+
+        <main class="calculator-section">
+            <div class="calculator-container">
+                <div class="voice-feedback">
+                    <div id="voiceWaveform" class="voice-waveform"></div>
+                    <div id="voiceText" class="voice-text"></div>
+                </div>
+
+                <div class="calculator">
+                    <div class="display">
+                        <div class="previous-operand"></div>
+                        <div class="current-operand">0</div>
+                    </div>
+
+                    <div class="history-panel">
+                        <div class="history-header">
+                            <h3>Calculation History</h3>
+                            <button id="clearHistory" class="clear-history" title="Clear History">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div id="historyList" class="history-list"></div>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="operator" data-action="clear">AC</button>
+                        <button class="operator" data-action="delete">DEL</button>
+                        <button class="operator" data-action="percent">%</button>
+                        <button class="operator" data-action="divide">÷</button>
+                        
+                        <button class="number">7</button>
+                        <button class="number">8</button>
+                        <button class="number">9</button>
+                        <button class="operator" data-action="multiply">×</button>
+                        
+                        <button class="number">4</button>
+                        <button class="number">5</button>
+                        <button class="number">6</button>
+                        <button class="operator" data-action="subtract">-</button>
+                        
+                        <button class="number">1</button>
+                        <button class="number">2</button>
+                        <button class="number">3</button>
+                        <button class="operator" data-action="add">+</button>
+                        
+                        <button class="number zero">0</button>
+                        <button class="number">.</button>
+                        <button class="operator" data-action="calculate">=</button>
+
+                        <button class="operator" data-action="square">x²</button>
+                        <button class="operator" data-action="sqrt">√</button>
+                        <button class="operator" data-action="power">xʸ</button>
+                        <button class="operator" data-action="memory">M+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-panel">
+                <div class="feature-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Basic Operations</h3>
+                    <p>Addition, subtraction, multiplication, and division</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-microphone"></i>
+                    <h3>Voice Control</h3>
+                    <p>English and Hindi language support with real-time feedback</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-history"></i>
+                    <h3>History</h3>
+                    <p>Track your calculations with timestamps</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-memory"></i>
+                    <h3>Memory</h3>
+                    <p>Store and recall values</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>© 2024 Smart AI Calculator. All rights reserved.
+                <br> designed by Raushan Dubey &hearts;
+            </p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/7.7.3/wavesurfer.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
